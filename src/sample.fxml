@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="553.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+    <children>
+        <AnchorPane fx:id="timeOut" minHeight="0.0" minWidth="0.0" opacity="0.86" prefHeight="565.0" prefWidth="640.0" style="-fx-background-color: #252525;">
+            <children>
+            <Pane fx:id="boxmenu" layoutX="9.0" layoutY="24.0" prefHeight="200.0" prefWidth="617.0">
+               <children>
+                      <Button fx:id="entrata_button" layoutX="65.0" layoutY="101.0" mnemonicParsing="false" onAction="#enter" prefHeight="73.0" prefWidth="166.0" style="-fx-background-color: #fee3ae;" text="ENTRATA" textFill="#252525">
+                          <font>
+                              <Font name="Cooper Black" size="24.0" />
+                          </font>
+                      </Button>
+                      <Button fx:id="uscita_button" layoutX="380.0" layoutY="101.0" mnemonicParsing="false" onAction="#exit" prefHeight="73.0" prefWidth="151.0" style="-fx-background-color: #fee3ae;" text="USCITA" textFill="#252525">
+                          <font>
+                              <Font name="Cooper Black" size="24.0" />
+                          </font>
+                      </Button>
+                      <Label layoutX="138.0" layoutY="34.0" prefHeight="66.0" prefWidth="341.0" text="Seleziona cosa vuoi fare" textAlignment="CENTER" textFill="#fee3ae">
+                          <font>
+                              <Font size="32.0" />
+                          </font>
+                      </Label>
+                      <Label layoutX="431.0" layoutY="-26.0" prefHeight="66.0" prefWidth="200.0" text="SteveJobsParking" textAlignment="CENTER" textFill="#fee3ae">
+                          <font>
+                              <Font name="Trebuchet MS" size="23.0" />
+                          </font>
+                      </Label>
+               </children>
+            </Pane>
+                <Pane fx:id="boxIn" layoutX="156.0" layoutY="25.0" prefHeight="398.0" prefWidth="322.0" style="-fx-background-color: #252525;" visible="false">
+                    <children>
+                        <Label layoutX="19.0" prefHeight="43.0" prefWidth="287.0" text="Inserisci la targa del tuo veicolo" textAlignment="CENTER" textFill="#fee3ae">
+                            <font>
+                                <Font name="Cooper Black" size="20.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="targaIn_label" layoutX="38.0" layoutY="43.0" prefHeight="42.0" prefWidth="238.0" style="-fx-background-color: white;" />
+                        <Label layoutX="41.0" layoutY="85.0" prefHeight="43.0" prefWidth="232.0" text="Seleziona il tipo di veicolo" textFill="#fee3ae">
+                            <font>
+                                <Font name="Cooper Black" size="20.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="132.0" layoutY="178.0" prefHeight="43.0" prefWidth="62.0" text="Orario" textFill="#fee3ae">
+                            <font>
+                                <Font name="Cooper Black" size="20.0" />
+                            </font>
+                        </Label>
+                        <Button fx:id="conferma_button" layoutX="66.0" layoutY="333.0" mnemonicParsing="false" onAction="#confirmEnter" prefHeight="34.0" prefWidth="182.0" style="-fx-background-color: #fee3ae;" text="CONFERMA" textFill="#252525">
+                            <font>
+                                <Font name="Cooper Black" size="24.0" />
+                            </font>
+                        </Button>
+                  <HBox fx:id="radioGroupType" layoutX="29.0" layoutY="178.0" prefHeight="43.0" prefWidth="265.0" visible="false">
+                     <children>
+                              <RadioButton fx:id="scooter_radio" mnemonicParsing="false" prefHeight="34.0" prefWidth="84.0" text="Scooter">
+                                  <font>
+                                      <Font name="Comic Sans MS Bold" size="10.0" />
+                                  </font>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="typeVehicle" />
+                           </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="tir_radio" mnemonicParsing="false" prefHeight="34.0" prefWidth="84.0" text="Tir" toggleGroup="$typeVehicle">
+                                  <font>
+                                      <Font name="Comic Sans MS Bold" size="10.0" />
+                                  </font>
+                              </RadioButton>
+                              <RadioButton fx:id="auto_radio" mnemonicParsing="false" prefHeight="34.0" prefWidth="84.0" text="Auto" toggleGroup="$typeVehicle">
+                                  <font>
+                                      <Font name="Comic Sans MS Bold" size="10.0" />
+                                  </font>
+                              </RadioButton>
+                     </children>
+                  </HBox>
+                  <Label fx:id="timeIn" layoutX="69.0" layoutY="221.0" prefHeight="83.0" prefWidth="189.0" text="" textAlignment="CENTER" textFill="#fee3ae">
+                     <font>
+                        <Font name="Trebuchet MS" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="kindLabel" layoutX="38.0" layoutY="128.0" prefHeight="43.0" prefWidth="232.0" style="-fx-background-color: white;" />
+                    </children>
+                </Pane>
+                <Pane fx:id="boxOut" layoutX="164.0" layoutY="25.0" prefHeight="398.0" prefWidth="306.0" style="-fx-background-color: #252525;" visible="false">
+                    <children>
+                        <Label layoutX="6.0" prefHeight="43.0" prefWidth="287.0" text="Inserisci la targa del tuo veicolo" textAlignment="CENTER" textFill="#fee3ae">
+                            <font>
+                                <Font name="Cooper Black" size="20.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="112.0" layoutY="92.0" prefHeight="43.0" prefWidth="62.0" text="Orario" textFill="#fee3ae">
+                            <font>
+                                <Font name="Cooper Black" size="20.0" />
+                            </font>
+                        </Label>
+                        <Button fx:id="invio_button" layoutX="59.0" layoutY="275.0" mnemonicParsing="false" onAction="#confirmExit" prefHeight="34.0" prefWidth="181.0" style="-fx-background-color: #fee3ae;" text="INVIO" textFill="#252525">
+                            <font>
+                                <Font name="Cooper Black" size="24.0" />
+                            </font>
+                        </Button>
+                        <TextField fx:id="targaOut_label" layoutX="30.0" layoutY="43.0" prefHeight="42.0" prefWidth="238.0" style="-fx-background-color: white;" />
+                  <Label fx:id="timeOut_label" layoutX="62.0" layoutY="161.0" prefHeight="83.0" prefWidth="189.0" text="" textAlignment="CENTER" textFill="#fee3ae">
+                     <font>
+                        <Font name="Trebuchet MS" size="24.0" />
+                     </font>
+                  </Label>
+                    </children>
+                </Pane>
+                <Pane fx:id="bloccoPaga" layoutX="164.0" layoutY="224.0" prefHeight="187.0" prefWidth="306.0" visible="false">
+                    <children>
+                        <Label layoutX="63.0" prefHeight="43.0" prefWidth="181.0" text="Importo da pagare" textAlignment="CENTER" textFill="#fee3ae">
+                            <font>
+                                <Font name="Cooper Black" size="20.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="importo_label" disable="true" layoutX="34.0" layoutY="60.0" prefHeight="42.0" prefWidth="238.0" style="-fx-background-color: white;">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="menu" layoutX="78.0" layoutY="122.0" mnemonicParsing="false" onAction="#restartMenu" prefHeight="51.0" prefWidth="151.0" style="-fx-background-color: #fee3ae;" text="MENU" textFill="#252525">
+                     <font>
+                        <Font name="Cooper Black" size="24.0" />
+                     </font>
+                  </Button>
+                    </children>
+                </Pane>
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>
